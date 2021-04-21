@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assign Voucher</title>
+</head>
+<body>
+
+
+<button
+    onclick="window.location.href = 'http://127.0.0.1:8000/get_voucher';">
+        Show available Vouchers
+    </button>
+
+
+<div class="container">
+    <form method="POST">
+      <fieldset>
+        <legend>Welcome</legend>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Assign Voucher to consumer</button>
+      </fieldset>
+    </form>
+</div>
+
+
+
+
+</body>
+</html>

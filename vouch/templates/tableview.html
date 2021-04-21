@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Here are all the Available Vouchers</h1>
+<div>
+    <table style="float: left">
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Amount</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+    {% for item in u %}
+    <tr> 
+        <td>{{ item.id }}</td>
+        <td>{{ item.code }}</td>
+        <td>{{ item.amount }}</td>
+        <td>{{ item.start_time }}</td>
+        <td>{{ item.end_time }}</td>
+    </tr>
+    {% endfor %}
+    
+</table>
+    <!-- <table style="float: left">
+    <tr>
+        <th>ID</th>
+        <th>Mobile</th>
+    </tr>
+    {% for item in v %}
+    <tr> 
+        <td>{{ item.id }}</td>
+        <td>{{ item.mobile }}</td>
+    </tr>
+    {% endfor %}
+</table> -->
+</div>
+
+</body>
+</html>
